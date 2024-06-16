@@ -7,7 +7,7 @@ import Home from './pages/Home';
 function App() {
     return (
         <>
-            <div className="mx-[4rem] sm:mx-[8rem] md:mx-[12rem] lg:mx-[16rem] xl:mx-[20rem] font-inconsolata"> 
+            <div className="mx-[4rem] sm:mx-[8rem] md:mx-[12rem] lg:mx-[16rem] xl:mx-[20rem] shadow-md font-inconsolata"> 
                 <Router>
                     <Navbar />
                     <Routes>
