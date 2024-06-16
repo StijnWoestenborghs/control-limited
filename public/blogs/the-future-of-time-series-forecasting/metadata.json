@@ -4,5 +4,5 @@
   "authors": ["Stijn Woestenborghs"],
   "title": "The Future of Time Series Forecasting",
   "shortIntro": "After reinforcement learning, computer vision & NLP, time series forecasting is next in line to be disrupted by deep learning technology. A case study on energy demand forecasting.",
-  "githubRepo": "https://github.com/johndoe/mojo-superpowers"
+  "githubRepo": "https://github.com/StijnWoestenborghs/energy-demand-forecasting"
 }
