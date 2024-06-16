@@ -13,7 +13,7 @@ Made with :black_heart:
     return (
         <>
             <hr className="border-gray-200 mt-8" />
-            <footer className="bg-white p-4">
+            <footer id="footer" className="bg-white p-4">
                 <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
                     <Link to="/" className="flex items-center space-x-2 text-2xl font-bold text-black">
                         <img src={`/icons/ctrl-logo.svg`} alt="Home" className="w-10 h-10" />
