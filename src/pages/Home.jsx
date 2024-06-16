@@ -1,14 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import BlogPost from '../components/BlogPost';
-
-const blogIds = [
-    'the-future-of-time-series-forecasting',
-    'sim2real-transfer-in-mechatronic-systems',
-    'python-cpp-lets-talk',
-    'unlocking-the-car-batterys-full-potential',
-    'mojo-does-give-superpowers'
-  ];
+import { blogIds } from '../constants';
 
 
 export async function fetchJson(filePath) {

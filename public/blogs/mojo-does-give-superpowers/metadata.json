@@ -1,7 +1,7 @@
 {
   "date": "OCTOBER, 2023",
   "topic": "Machine Learning",
-  "authors": ["Stijn Woestenborghs"],
+  "authors": ["Stijn Woestenborghs", "Cedric Van Heck"],
   "title": "Mojo does give Superpowers",
   "shortIntro": "Faster than Python, faster than Numpy, faster than JAX and faster than C++, is my experience when testing out Mojo for the first time. A simple optimization problem implemented in Mojo: A new programming language for AI developers that is on its journey to become a full superset of Python.",
   "githubRepo": "https://github.com/johndoe/mojo-superpowers"
