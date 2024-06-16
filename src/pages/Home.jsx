@@ -1,7 +1,40 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
+import BlogPost from '../components/BlogPost';
+
+const blogIds = [
+    'the-future-of-time-series-forecasting',
+    'sim2real-transfer-in-mechatronic-systems',
+    'python-cpp-lets-talk',
+    'unlocking-the-car-batterys-full-potential',
+    'mojo-does-give-superpowers'
+  ];
+
+
+export async function fetchJson(filePath) {
+    const response = await fetch(filePath);
+    const json = await response.json();
+    return json;
+  }
+
 
 function Home() {
+    const [blogs, setBlogs] = useState([]);
+
+    useEffect(() => {
+      const fetchMetadata = async () => {
+        const blogData = await Promise.all(
+          blogIds.map(async id => {
+            const metadata = await fetchJson(`/blogs/${id}/metadata.json`);
+            return { id, ...metadata };
+          })
+        );
+        setBlogs(blogData);
+      };
+  
+      fetchMetadata();
+    }, []);
+
     return (
         <div className="container mx-auto p-8">
             <div className="flex flex-col md:flex-row items-start md:space-x-8">
@@ -23,7 +56,9 @@ function Home() {
                         After all, something remains <em>just a theory</em> before it gets actually <strong>deployed</strong>. <span role="img" aria-label="rocket">🚀</span>
                     </p>
                     <div className="flex space-x-4 mt-6">
-                        <button className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-400 transition duration-300"><b>Read</b></button>
+                        <ScrollLink to="blog-posts" smooth={true} duration={500}>
+                            <button className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-400 transition duration-300"><b>Read</b></button>
+                        </ScrollLink>
                         <ScrollLink to="footer" smooth={true} duration={500}>
                             <button className="border border-black text-black px-6 py-2 rounded-full hover:bg-gray-400 hover:border-gray-400 hover:text-white transition duration-300"><b>Contact</b></button>
                         </ScrollLink>
@@ -32,6 +67,21 @@ function Home() {
                 <div className="md:w-1/2 mt-8 md:mt-0 flex items-center justify-center">
                     <img src="/profile.jpg" alt="Stijn Woestenborghs" className="rounded-lg w-full max-w-sm"/>
                 </div>
+            </div>
+            <div className="mt-8" id="blog-posts">
+                {blogs.map((blog, index) => (
+                    <React.Fragment key={index}>
+                        <BlogPost
+                            id={blog.id}
+                            date={blog.date}
+                            topic={blog.topic}
+                            authors={blog.authors}
+                            title={blog.title}
+                            shortIntro={blog.shortIntro}
+                        />
+                        {index < blogs.length - 1 && <hr className="border-gray-200 mt-2 mx-4" />}
+                    </React.Fragment>
+                ))}
             </div>
         </div>
     );

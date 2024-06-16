@@ -20,7 +20,7 @@ function Navbar() {
                     </div>
                 </div>
             </nav>
-            <hr className="border-gray-200 mt-0" />
+            <hr className="border-gray-200 mt-2 mx-4" />
         </>
     );
 }
