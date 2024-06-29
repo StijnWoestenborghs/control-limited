@@ -60,6 +60,15 @@ function BlogPostPage() {
   };
 
   const components = {
+    h1({ children }) { return <h1 className="text-4xl font-bold mb-2">{children}</h1>; },
+    h2({ children }) { return <h2 className="text-3xl font-bold mb-2">{children}</h2>; },
+    h3({ children }) { return <h3 className="text-2xl font-bold mb-2">{children}</h3>; },
+    h4({ children }) { return <h4 className="text-xl font-bold mb-2">{children}</h4>; },
+    h5({ children }) { return <h5 className="text-lg font-bold mb-2">{children}</h5>; },
+    h6({ children }) { return <h6 className="text-base font-bold mb-2">{children}</h6>; },
+    ul({ children }) { return <ul className="list-disc pl-5">{children}</ul>; },
+    ol({ children }) { return <ol className="list-decimal pl-5">{children}</ol>; },
+    a({ href, children }) { return <a href={href} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 hover:underline">{children}</a>},
     code({ node, inline, className, children, ...props }) {
       const match = /language-(\w+)/.exec(className || '');
       const index = node.position.start.line;
@@ -81,15 +90,6 @@ function BlogPostPage() {
         </code>
       );
     },
-    h1({ children }) { return <h1 className="text-4xl font-bold mb-2">{children}</h1>; },
-    h2({ children }) { return <h2 className="text-3xl font-bold mb-2">{children}</h2>; },
-    h3({ children }) { return <h3 className="text-2xl font-bold mb-2">{children}</h3>; },
-    h4({ children }) { return <h4 className="text-xl font-bold mb-2">{children}</h4>; },
-    h5({ children }) { return <h5 className="text-lg font-bold mb-2">{children}</h5>; },
-    h6({ children }) { return <h6 className="text-base font-bold mb-2">{children}</h6>; },
-    ul({ children }) { return <ul className="list-disc pl-5">{children}</ul>; },
-    ol({ children }) { return <ol className="list-decimal pl-5">{children}</ol>; },
-    a({ href, children }) { return <a href={href} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 hover:underline">{children}</a>},
   };
 
   if (!metadata) {
