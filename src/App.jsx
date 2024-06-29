@@ -8,7 +8,7 @@ import BlogPostPage from './pages/BlogPostPage';
 function App() {
     return (
         <>
-            <div className="mx-[4rem] sm:mx-[8rem] md:mx-[12rem] lg:mx-[16rem] xl:mx-[20rem] shadow-md font-inconsolata"> 
+            <div className="mx-[4rem] sm:mx-[8rem] md:mx-[10rem] lg:mx-[14rem] xl:mx-[18rem] shadow-md font-inconsolata"> 
                 <Router>
                     <Navbar />
                     <Routes>

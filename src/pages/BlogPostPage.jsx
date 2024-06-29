@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkEmoji from 'remark-emoji';
+import rehypeRaw from 'rehype-raw';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { blogPostPaths, metadataPaths } from '../constants';
@@ -85,7 +86,9 @@ function BlogPostPage() {
     h3({ children }) {return <h3 className="text-2xl font-bold mb-2">{children}</h3>;},
     h4({ children }) {return <h4 className="text-xl font-bold mb-2">{children}</h4>;},
     h5({ children }) {return <h5 className="text-lg font-bold mb-2">{children}</h5>;},
-    h6({ children }) {return <h6 className="text-base font-bold mb-2">{children}</h6>;}
+    h6({ children }) {return <h6 className="text-base font-bold mb-2">{children}</h6>;},
+    ul({ children }) {return <ul className="list-disc pl-5">{children}</ul>;},
+    ol({ children }) {return <ol className="list-decimal pl-5">{children}</ol>;}
   };
 
   if (!metadata) {
@@ -114,6 +117,7 @@ function BlogPostPage() {
       </div>
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkEmoji]}
+        rehypePlugins={[rehypeRaw]}
         components={renderers}
       >
         {blogContent}
