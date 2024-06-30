@@ -4,15 +4,14 @@ import BlogPost from '../components/BlogPost';
 import { blogIds } from '../constants';
 
 
-export async function fetchJson(filePath) {
-    const response = await fetch(filePath);
-    const json = await response.json();
-    return json;
-  }
-
-
 function Home() {
     const [blogs, setBlogs] = useState([]);
+
+    async function fetchJson(filePath) {
+        const response = await fetch(filePath);
+        const json = await response.json();
+        return json;
+    }
 
     useEffect(() => {
       const fetchMetadata = async () => {
@@ -68,7 +67,6 @@ function Home() {
                             id={blog.id}
                             date={blog.date}
                             topic={blog.topic}
-                            authors={blog.authors}
                             title={blog.title}
                             shortIntro={blog.shortIntro}
                         />
