@@ -17,7 +17,7 @@ function Home() {
       const fetchMetadata = async () => {
         const blogData = await Promise.all(
           blogIds.map(async id => {
-            const metadata = await fetchJson(`/blogs/${id}/metadata.json`);
+            const metadata = await fetchJson(`./blogs/${id}/metadata.json`);
             return { id, ...metadata };
           })
         );
