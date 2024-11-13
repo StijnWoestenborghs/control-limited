@@ -9,7 +9,7 @@ Faster than Python, faster than Numpy, faster than JAX and faster than C++, is m
 <br>
 <div class="flex justify-center">
 
-![Flame](/blogs/mojo-does-give-superpowers/flame2.gif)
+![Flame](./blogs/mojo-does-give-superpowers/flame2.gif)
 
 </div>
 <br>
@@ -32,9 +32,9 @@ The example implements a simple Numerical Optimization algorithm as this is one 
 <br>
 
 <div class="flex justify-center space-x-4">
-  <img src="/blogs/mojo-does-give-superpowers/circle.gif" alt="Image 1" class="w-1/3">
-  <img src="/blogs/mojo-does-give-superpowers/sphere.gif" alt="Image 2" class="w-1/3">
-  <img src="/blogs/mojo-does-give-superpowers/modular3.gif" alt="Image 3" class="w-1/3">
+  <img src="./blogs/mojo-does-give-superpowers/circle.gif" alt="Image 1" class="w-1/3">
+  <img src="./blogs/mojo-does-give-superpowers/sphere.gif" alt="Image 2" class="w-1/3">
+  <img src="./blogs/mojo-does-give-superpowers/modular3.gif" alt="Image 3" class="w-1/3">
 </div>
 
 <br>
@@ -70,7 +70,7 @@ After implementing them, and running some tests with an increasing order of the 
 <br>
 <div class="flex justify-center">
 
-![Measurements-log](/blogs/mojo-does-give-superpowers/measurements-log.png)
+![Measurements-log](./blogs/mojo-does-give-superpowers/measurements-log.png)
 
 </div>
 <br>
@@ -84,7 +84,7 @@ In the higher order occasions (N=1000) Mojo outperformed Python by a factor of ~
 <br>
 <div class="flex justify-center">
 
-![Measurements-linear](/blogs/mojo-does-give-superpowers/measurements-linear.png)
+![Measurements-linear](./blogs/mojo-does-give-superpowers/measurements-linear.png)
 
 </div>
 <br>
@@ -107,8 +107,8 @@ Digging a little deeper inside the gradient descent algorithm will explain why i
 <br>
 
 <div class="flex justify-center space-x-4">
-  <img src="/blogs/mojo-does-give-superpowers/Dmatrix.png" alt="Dmatrix" class="w-1/2">
-  <img src="/blogs/mojo-does-give-superpowers/gradient-descent-2.png" alt="X" class="w-1/2">
+  <img src="./blogs/mojo-does-give-superpowers/Dmatrix.png" alt="Dmatrix" class="w-1/2">
+  <img src="./blogs/mojo-does-give-superpowers/gradient-descent-2.png" alt="X" class="w-1/2">
 </div>
 
 <br>
@@ -118,7 +118,7 @@ Figuring out all the 3D coordinates of all points X can be solved by simply esti
 <br>
 <div class="flex justify-center">
 
-![gd3](/blogs/mojo-does-give-superpowers/gradient-descent-3.png)
+![gd3](./blogs/mojo-does-give-superpowers/gradient-descent-3.png)
 
 </div>
 <br>
@@ -128,7 +128,7 @@ The loss function will look something like this:
 <br>
 <div class="flex justify-center">
 
-![gd4](/blogs/mojo-does-give-superpowers/gradient-descent-4.png)
+![gd4](./blogs/mojo-does-give-superpowers/gradient-descent-4.png)
 
 </div>
 <br>
@@ -142,7 +142,7 @@ The gradient can be calculated by automatic differentiation (as PyTorch and Tens
 <br>
 <div class="flex justify-center">
 
-![gd5](/blogs/mojo-does-give-superpowers/gradient-descent-5.png)
+![gd5](./blogs/mojo-does-give-superpowers/gradient-descent-5.png)
 
 </div>
 <br>
@@ -152,7 +152,7 @@ So the complete gradient matrix will be the following.
 <br>
 <div class="flex justify-center">
 
-![gd6](/blogs/mojo-does-give-superpowers/gradient-descent-6.png)
+![gd6](./blogs/mojo-does-give-superpowers/gradient-descent-6.png)
 
 </div>
 <br>

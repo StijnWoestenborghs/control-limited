@@ -43,7 +43,7 @@ Let us train an energy demand forecast model. The model was trained on a dataset
 <br>
 <div class="flex justify-center">
 
-![forecasting-test-set](/blogs/the-future-of-time-series-forecasting/forecasting-test-set.png)
+![forecasting-test-set](./blogs/the-future-of-time-series-forecasting/forecasting-test-set.png)
 
 </div>
 <br>
@@ -55,7 +55,7 @@ Below, you see the average electricity consumption of all households combined. T
 <br>
 <div class="flex justify-center">
 
-![seasonality](/blogs/the-future-of-time-series-forecasting/seasonality.png)
+![seasonality](./blogs/the-future-of-time-series-forecasting/seasonality.png)
 
 </div>
 <br>
@@ -113,7 +113,7 @@ It is worth mentioning that every trained model was taken out of the box. This p
 <br>
 <div class="flex justify-center">
 
-![forecasting-example](/blogs/the-future-of-time-series-forecasting/forecasting-example.png)
+![forecasting-example](./blogs/the-future-of-time-series-forecasting/forecasting-example.png)
 
 </div>
 <br>
@@ -130,7 +130,7 @@ Deep learning models provide us with a forecast that is optimized across multipl
 <br>
 <div class="flex justify-center">
 
-![animation](/blogs/the-future-of-time-series-forecasting/animation.gif)
+![animation](./blogs/the-future-of-time-series-forecasting/animation.gif)
 
 </div>
 <br>

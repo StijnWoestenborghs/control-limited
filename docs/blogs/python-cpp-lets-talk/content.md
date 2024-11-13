@@ -13,7 +13,7 @@
 <br>
 <div class="flex justify-center">
 
-![python-vs-cpp-full](/blogs/python-cpp-lets-talk/python-vs-cpp-full.png)
+![python-vs-cpp-full](./blogs/python-cpp-lets-talk/python-vs-cpp-full.png)
 
 </div>
 <br>
@@ -53,7 +53,7 @@ We can see that, for this example, the function is a factor 33 times faster with
 <br>
 <div class="flex justify-center">
 
-![performance](/blogs/python-cpp-lets-talk/performance.png)
+![performance](./blogs/python-cpp-lets-talk/performance.png)
 
 </div>
 <br>
@@ -125,7 +125,7 @@ For completeness, two unit tests are provided. The first one is testing the oper
 <br>
 <div class="flex justify-center">
 
-![unit-tests](/blogs/python-cpp-lets-talk/unit-tests.png)
+![unit-tests](./blogs/python-cpp-lets-talk/unit-tests.png)
 
 </div>
 <br>
@@ -138,7 +138,7 @@ Note that compiler optimizations were not turned on during compilation. The reas
 <br>
 <div class="flex justify-center">
 
-![compiler-optimisation](/blogs/python-cpp-lets-talk/compiler-optimisation.jpeg)
+![compiler-optimisation](./blogs/python-cpp-lets-talk/compiler-optimisation.jpeg)
 
 </div>
 <br>

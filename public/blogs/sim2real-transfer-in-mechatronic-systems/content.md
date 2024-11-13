@@ -33,7 +33,7 @@ As for the environments, [OpenAI Gym](https://github.com/openai/gym) provides do
 <br>
 <div class="flex justify-center">
 
-![gym-envs](/blogs/sim2real-transfer-in-mechatronic-systems/gym-envs.png)
+![gym-envs](./blogs/sim2real-transfer-in-mechatronic-systems/gym-envs.png)
 
 </div>
 <br>
@@ -91,7 +91,7 @@ Two main arguments define how the domain parameters are randomized during the tr
     <br>
     <div class="flex justify-center">
 
-    ![phi_pendulum](/blogs/sim2real-transfer-in-mechatronic-systems/phi_pendulum.png)
+    ![phi_pendulum](./blogs/sim2real-transfer-in-mechatronic-systems/phi_pendulum.png)
 
     </div>
     <br>
@@ -109,9 +109,9 @@ Two main arguments define how the domain parameters are randomized during the tr
 <br>
 
 <div class="flex justify-center space-x-4">
-  <img src="/blogs/sim2real-transfer-in-mechatronic-systems/domain-randomizer_cart.gif" alt="cart" class="w-1/3">
-  <img src="/blogs/sim2real-transfer-in-mechatronic-systems/domain-randomizer-pendulum.gif" alt="pendulum" class="w-1/3">
-  <img src="/blogs/sim2real-transfer-in-mechatronic-systems/acrobot-env.gif" alt="acrobot" class="w-1/3">
+  <img src="./blogs/sim2real-transfer-in-mechatronic-systems/domain-randomizer_cart.gif" alt="cart" class="w-1/3">
+  <img src="./blogs/sim2real-transfer-in-mechatronic-systems/domain-randomizer-pendulum.gif" alt="pendulum" class="w-1/3">
+  <img src="./blogs/sim2real-transfer-in-mechatronic-systems/acrobot-env.gif" alt="acrobot" class="w-1/3">
 </div>
 
 <br>
@@ -129,7 +129,7 @@ If you are interested in the implementation architecture then you should definit
 <br>
 <div class="flex justify-center">
 
-![total-architecture](/blogs/sim2real-transfer-in-mechatronic-systems/total-architecture.png)
+![total-architecture](./blogs/sim2real-transfer-in-mechatronic-systems/total-architecture.png)
 
 </div>
 <br>
@@ -157,7 +157,7 @@ So are we there already? Did we close the reality gap here? Not completely… Su
 <br>
 <div class="flex justify-center">
 
-![phi_more](/blogs/sim2real-transfer-in-mechatronic-systems/phi_more.png)
+![phi_more](./blogs/sim2real-transfer-in-mechatronic-systems/phi_more.png)
 
 </div>
 <br>
@@ -173,7 +173,7 @@ Simply put: ADR’s goal is to optimize and automate the tedious process of find
 <br>
 <div class="flex justify-center">
 
-![ADR-framework](/blogs/sim2real-transfer-in-mechatronic-systems/ADR-framework.png)
+![ADR-framework](./blogs/sim2real-transfer-in-mechatronic-systems/ADR-framework.png)
 
 </div>
 <br>

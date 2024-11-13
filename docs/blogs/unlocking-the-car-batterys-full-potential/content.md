@@ -46,7 +46,7 @@ Like every ML project we start by exploring the dataset, dividing it into a trai
 <br>
 <div class="flex justify-center">
 
-![ML-approach](/blogs/unlocking-the-car-batterys-full-potential/ML-approach.png)
+![ML-approach](./blogs/unlocking-the-car-batterys-full-potential/ML-approach.png)
 
 </div>
 <br>
@@ -63,7 +63,7 @@ The baseline and starting point for this project was inspired by [this paper](ht
 <br>
 <div class="flex justify-center">
 
-![model-baseline](/blogs/unlocking-the-car-batterys-full-potential/model-baseline.png)
+![model-baseline](./blogs/unlocking-the-car-batterys-full-potential/model-baseline.png)
 
 </div>
 <br>
@@ -76,7 +76,7 @@ a **MAE of 2.182%**. Without spending too much time on these results, let’s mo
 <br>
 <div class="flex justify-center">
 
-![baseline-performance](/blogs/unlocking-the-car-batterys-full-potential/baseline-performance.png)
+![baseline-performance](./blogs/unlocking-the-car-batterys-full-potential/baseline-performance.png)
 
 </div>
 <br>
@@ -95,7 +95,7 @@ In this step one tries to extract important features from the raw data and find/
 <br>
 <div class="flex justify-center">
 
-![model-feature-all](/blogs/unlocking-the-car-batterys-full-potential/model-feature-all.png)
+![model-feature-all](./blogs/unlocking-the-car-batterys-full-potential/model-feature-all.png)
 
 </div>
 <br>
@@ -105,7 +105,7 @@ The feature importance of this set was calculated using the [Shapley](https://sh
 <br>
 <div class="flex justify-center">
 
-![shapley-feature-importance](/blogs/unlocking-the-car-batterys-full-potential/shapley-feature-importance.png)
+![shapley-feature-importance](./blogs/unlocking-the-car-batterys-full-potential/shapley-feature-importance.png)
 
 </div>
 <br>
@@ -117,7 +117,7 @@ The hyperparameter optimization involves training of multiple models with differ
 <br>
 <div class="flex justify-center">
 
-![hyper-learning-curves](/blogs/unlocking-the-car-batterys-full-potential/hyper-learning-curves.png)
+![hyper-learning-curves](./blogs/unlocking-the-car-batterys-full-potential/hyper-learning-curves.png)
 
 </div>
 <br>
@@ -127,7 +127,7 @@ The best of all models results in an **MAE of 1.097%**. Again, a remarkable impr
 <br>
 <div class="flex justify-center">
 
-![annotated-contour](/blogs/unlocking-the-car-batterys-full-potential/annotated-contour.png)
+![annotated-contour](./blogs/unlocking-the-car-batterys-full-potential/annotated-contour.png)
 
 </div>
 <br>
@@ -152,7 +152,7 @@ The second experiment around hyperparameter optimization concerns the DNN model 
 <br>
 <div class="flex justify-center">
 
-![model-architecture](/blogs/unlocking-the-car-batterys-full-potential/model-architecture.png)
+![model-architecture](./blogs/unlocking-the-car-batterys-full-potential/model-architecture.png)
 
 </div>
 <br>
@@ -166,7 +166,7 @@ More importantly is to see that the absolute error of the model has decreased a 
 <br>
 <div class="flex justify-center">
 
-![area-of-error-3](/blogs/unlocking-the-car-batterys-full-potential/area-of-error-3.png)
+![area-of-error-3](./blogs/unlocking-the-car-batterys-full-potential/area-of-error-3.png)
 
 </div>
 <br>
@@ -176,8 +176,8 @@ The same areas appear when it comes to model performance: Low SoC, high temperat
 <br>
 
 <div class="flex justify-center space-x-4">
-  <img src="/blogs/unlocking-the-car-batterys-full-potential/error_distribution_10degC.png" alt="error_distribution_10degC" class="w-1/2">
-  <img src="/blogs/unlocking-the-car-batterys-full-potential/error_distribution_-10degC.png" alt="error_distribution_-10degC" class="w-1/2">
+  <img src="./blogs/unlocking-the-car-batterys-full-potential/error_distribution_10degC.png" alt="error_distribution_10degC" class="w-1/2">
+  <img src="./blogs/unlocking-the-car-batterys-full-potential/error_distribution_-10degC.png" alt="error_distribution_-10degC" class="w-1/2">
 </div>
 
 <br>
