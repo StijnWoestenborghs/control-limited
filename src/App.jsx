@@ -8,7 +8,7 @@ function App() {
     return (
         <>
             <div className="mx-[4rem] sm:mx-[8rem] md:mx-[10rem] lg:mx-[14rem] xl:mx-[18rem] shadow-md font-inconsolata"> 
-                <Router>
+                <Router basename='/control-limited'>
                     <Navbar />
                     <Routes>
                         <Route path='/' element={<Home />} />
