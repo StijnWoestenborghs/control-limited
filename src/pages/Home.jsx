@@ -33,7 +33,7 @@ function Home() {
                 <div className="md:w-1/2 md:pl-8">  {/* Added padding-left for more space */}
                     <h1 className="text-5xl font-bold mb-4 flex items-center">
                         Hello World! 
-                        <img src="/assets/waving_hand_animated.gif" alt="wave" className="w-12 h-12 ml-2 inline" />
+                        <img src="./assets/waving_hand_animated.gif" alt="wave" className="w-12 h-12 ml-2 inline" />
                     </h1>
                     <p className="text-l mb-4">
                         Perhaps you agree that it is the task of an engineer to perceive, understand and <strong>control</strong> his environment. However, reality remains unpredictable, <strong>noisy</strong> and full of unexpected influences. So how can we manipulate a system to <strong>the best of our ability?</strong> An interesting question with many answers.
@@ -57,7 +57,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="md:w-1/2 mt-8 md:mt-0 flex items-center justify-center">
-                    <img src="/assets/profile.jpg" alt="Stijn Woestenborghs" className="rounded-lg w-full max-w-sm"/>
+                    <img src="./assets/profile.jpg" alt="Stijn Woestenborghs" className="rounded-lg w-full max-w-sm"/>
                 </div>
             </div>
             <div className="mt-8" id="blog-posts">
