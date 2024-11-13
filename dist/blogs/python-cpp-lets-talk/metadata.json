@@ -1,0 +1,8 @@
+{
+  "date": "AUGUST, 2022",
+  "topic": "Software Engineering",
+  "authors": ["Stijn Woestenborghs"],
+  "title": "Python, C++ ... Let's Talk!",
+  "shortIntro": "In an environment where complex optimization algorithms are being developed for edge computing platforms with limited resources, choosing the right tech stack is curcial. What about Python vs. C++ or the benifits of both? ",
+  "githubRepo": "https://github.com/StijnWoestenborghs/python-cpp-binding"
+}

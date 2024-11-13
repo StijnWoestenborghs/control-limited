@@ -1,0 +1,8 @@
+{
+  "date": "JULY, 2021",
+  "topic": "Machine Learning",
+  "authors": ["Stijn Woestenborghs"],
+  "title": "Sim2Real transfer in Mechatronic Systems",
+  "shortIntro": "While the idea behind Reinforcement Learning for mechatronic systems is appealing, it struggles to find its way into an industrial setting. Simreal, a library for Adaptive Domain Randomization.",
+  "githubRepo": "https://github.com/D2LAB-UGent/Simreal"
+}
