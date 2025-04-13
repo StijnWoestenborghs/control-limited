@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import BlogPost from '../components/BlogPost';
+import NavItem from '../components/NavItem';
+import ProjectItem from '../components/ProjectItem';
+import ExperienceItem from '../components/ExperienceItem';
 import { blogIds } from '../constants';
 import '../styles/theme.css';
 
 function Home() {
     const [darkMode, setDarkMode] = useState(false);
+    const [activeSection, setActiveSection] = useState('about');
 
     useEffect(() => {
         // Check system preference on mount
@@ -13,6 +17,26 @@ function Home() {
             setDarkMode(true);
             document.documentElement.setAttribute('data-theme', 'dark');
         }
+
+        // Add scroll event listener for section tracking
+        const handleScroll = () => {
+            const sections = ['about', 'experience', 'blog', 'projects'];
+            const currentSection = sections.find(section => {
+                const element = document.getElementById(section);
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    return rect.top <= 100 && rect.bottom >= 100;
+                }
+                return false;
+            });
+            
+            if (currentSection) {
+                setActiveSection(currentSection);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     const toggleDarkMode = () => {
@@ -37,10 +61,10 @@ function Home() {
 
                             {/* Navigation */}
                             <nav className="space-y-4">
-                                <a href="#about" className="block hover-primary transition-colors">About</a>
-                                <a href="#experience" className="block hover-primary transition-colors">Experience</a>
-                                <a href="#blog" className="block hover-primary transition-colors">Blog</a>
-                                <a href="#projects" className="block hover-primary transition-colors">Projects</a>
+                                <NavItem href="#about" isActive={activeSection === 'about'}>About</NavItem>
+                                <NavItem href="#experience" isActive={activeSection === 'experience'}>Experience</NavItem>
+                                <NavItem href="#blog" isActive={activeSection === 'blog'}>Blog</NavItem>
+                                <NavItem href="#projects" isActive={activeSection === 'projects'}>Projects</NavItem>
                             </nav>
                         </div>
 
@@ -96,13 +120,30 @@ function Home() {
 
                     {/* Experience Section */}
                     <section id="experience" className="mb-16">
-                        <h2 className="text-2xl font-bold mb-4 text-primary">Experience</h2>
+                        <h2 className="text-2xl font-bold mb-8 text-primary">Experience</h2>
                         <div className="space-y-8">
-                            <div className="border-l-2 border-primary pl-4">
-                                <h3 className="text-xl font-bold text-primary">Senior Frontend Engineer</h3>
-                                <p className="text-secondary">Company Name • 2020 - Present</p>
-                                <p className="mt-2 text-primary">Description of your role and achievements</p>
-                            </div>
+                            <ExperienceItem
+                                dateFrom="JULY 2017"
+                                dateTo="DEC 2017"
+                                title="UI Engineer Co-op"
+                                company="Apple"
+                                companyUrl="https://www.apple.com"
+                                explanation="Developed and styled interactive web apps for Apple Music, including the user interface of Apple Music's embeddable web player widget for in-browser user authorization and full song playback."
+                                links={[
+                                    { label: "MusicKit.js", url: "https://developer.apple.com/documentation/musickitjs" },
+                                    { label: "9to5Mac", url: "https://9to5mac.com" },
+                                    { label: "The Verge", url: "https://www.theverge.com" }
+                                ]}
+                                skills={["Ember", "SCSS", "JavaScript", "MusicKit.js"]}
+                            />
+                            <ExperienceItem
+                                dateFrom="JAN 2023"
+                                title="ML & Embedded Software Engineer"
+                                company="Sony"
+                                companyUrl="https://www.sony.com"
+                                explanation="Design and implementation of machine learning algorithms for embedded systems, focusing on optimization and real-time performance."
+                                skills={["Python", "C++", "TensorFlow", "PyTorch", "ARM", "CUDA"]}
+                            />
                         </div>
                     </section>
 
@@ -118,16 +159,20 @@ function Home() {
                     <section id="projects" className="mb-16">
                         <h2 className="text-2xl font-bold mb-4 text-primary">Featured Projects</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div className="border border-primary rounded-lg p-4 bg-secondary">
-                                <h3 className="text-xl font-bold mb-2 text-primary">Project Name</h3>
-                                <p className="text-secondary mb-4">
-                                    Brief description of the project
-                                </p>
-                                <div className="flex space-x-4">
-                                    <a href="#" className="hover-primary">Demo</a>
-                                    <a href="#" className="hover-primary">GitHub</a>
-                                </div>
-                            </div>
+                            <ProjectItem
+                                title="Control Limited"
+                                description="A modern control engineering portfolio showcasing advanced algorithms and embedded systems development."
+                                technologies={["React", "TailwindCSS", "Control Theory", "Embedded Systems"]}
+                                githubLink="https://github.com/yourusername/control-limited"
+                                demoLink="https://control-limited.com"
+                                image="/images/control-project.jpg"
+                            />
+                            <ProjectItem
+                                title="Embedded ML Pipeline"
+                                description="Implementation of machine learning algorithms optimized for resource-constrained embedded devices."
+                                technologies={["Python", "C++", "TensorFlow Lite", "ARM Cortex-M"]}
+                                githubLink="https://github.com/yourusername/embedded-ml"
+                            />
                         </div>
                     </section>
                 </div>
