@@ -23,14 +23,15 @@ const NavItem = ({ href, children, isActive }) => {
             top-1/2 
             -translate-y-1/2 
             h-[2px] 
-            bg-primary 
             transition-all 
             duration-300 
-            ${isActive ? 'w-6' : 'w-4'} 
+            ${isActive ? 'w-8 [background-color:var(--color-text)]' : 'w-4 [background-color:var(--color-text-secondary)] hover:[background-color:var(--color-text)]'} 
             nav-line
           `}
         />
-        {children}
+        <span className={`block transition-transform duration-300 ${isActive ? 'translate-x-4' : ''}`}>
+          {children}
+        </span>
       </a>
     </div>
   );
