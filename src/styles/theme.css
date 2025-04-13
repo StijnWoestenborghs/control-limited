@@ -1,0 +1,110 @@
+:root {
+    /* Light theme (default) */
+    --background: #fefeff;
+    --background-secondary: #f3f4f6;
+    --primary: #5d62fe;
+    --primary-hover: #4a4fd8;
+    --secondary: #637bff;
+    --secondary-hover: #374151;
+    --text: #030c12;
+    --text-secondary: #4b5563;
+    --border: #e5e7eb;
+    --border-hover: #d1d5db;
+    --accent: #ff6b6b;
+    --accent-hover: #ff5252;
+}
+
+[data-theme="dark"] {
+    --background: #030c12;
+    --background-secondary: #1a1f2e;
+    --primary: #637bff;
+    --primary-hover: #4b63e6;
+    --secondary: #9a9e9c;
+    --secondary-hover: #5c6388;
+    --text: #fefeff;
+    --text-secondary: #7d84aa;
+    --border: #0e1a30;
+    --border-hover: #4b5563;
+    --accent: #ff6b6b;
+    --accent-hover: #ff5252;
+}
+
+/* Base styles */
+body {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+/* Background styles */
+.bg-primary {
+    background-color: var(--background);
+}
+
+.bg-secondary {
+    background-color: var(--background-secondary);
+}
+
+/* Text styles */
+.text-primary {
+    color: var(--text);
+}
+
+.text-secondary {
+    color: var(--text-secondary);
+}
+
+/* Border styles */
+.border-primary {
+    border-color: var(--border);
+}
+
+.border-primary:hover {
+    border-color: var(--border-hover);
+}
+
+/* Interactive elements */
+.hover-primary {
+    transition: color 0.2s ease;
+}
+
+.hover-primary:hover {
+    color: var(--primary);
+}
+
+.hover-secondary {
+    transition: color 0.2s ease;
+}
+
+.hover-secondary:hover {
+    color: var(--secondary);
+}
+
+/* Button styles */
+.button-primary {
+    background-color: var(--primary);
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+.button-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.button-secondary {
+    background-color: var(--secondary);
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+.button-secondary:hover {
+    background-color: var(--secondary-hover);
+}
+
+/* Accent styles */
+.accent {
+    color: var(--accent);
+}
+
+.accent:hover {
+    color: var(--accent-hover);
+} 
