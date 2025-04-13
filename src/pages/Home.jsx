@@ -12,6 +12,28 @@ function Home() {
     const [darkMode, setDarkMode] = useState(false);
     const [activeSection, setActiveSection] = useState('about');
 
+    const [blogs, setBlogs] = useState([]);
+
+    async function fetchJson(filePath) {
+        const response = await fetch(filePath);
+        const json = await response.json();
+        return json;
+    }
+
+    useEffect(() => {
+      const fetchMetadata = async () => {
+        const blogData = await Promise.all(
+          blogIds.map(async id => {
+            const metadata = await fetchJson(`./blogs/${id}/metadata.json`);
+            return { id, ...metadata };
+          })
+        );
+        setBlogs(blogData);
+      };
+  
+      fetchMetadata();
+    }, []);
+
     useEffect(() => {
         // Check system preference on mount
         if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -114,7 +136,9 @@ function Home() {
                 <div className="w-full lg:w-2/3 lg:ml-[33.333333%] p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20">
                     {/* About Section */}
                     <section id="about" className="mb-16">
-                        <h2 className="text-2xl font-bold mb-4 text-primary">Hello World!</h2>
+                        <h2 className="text-2xl font-bold mb-4 text-primary">Hello World!
+                            <img src="./assets/waving_hand_animated.gif" alt="wave" className="w-9 h-9 ml-1 inline" />
+                        </h2>
                         <p className="text-secondary">
                             Perhaps you agree that it is the task of an engineer to perceive, understand and <span className="font-bold text-primary">control</span> his environment. However, reality remains unpredictable, noisy and full of unexpected influences. So how can we manipulate a system to <span className="font-bold text-primary">the best of our ability</span>? An interesting question with many answers.
                         </p>
@@ -183,9 +207,20 @@ function Home() {
 
                     {/* Blog Section */}
                     <section id="blog" className="mb-16">
-                        <h2 className="text-2xl font-bold mb-4 text-primary">Latest Posts</h2>
-                        <div className="space-y-6">
-                            {/* Blog posts will be mapped here */}
+                        <h2 className="text-2xl font-bold mb-4 text-primary">Blog Posts</h2>
+                        <div className="mt-8" id="blog-posts">
+                            {blogs.map((blog, index) => (
+                                <React.Fragment key={index}>
+                                    <BlogPost
+                                        id={blog.id}
+                                        date={blog.date}
+                                        topic={blog.topic}
+                                        title={blog.title}
+                                        shortIntro={blog.shortIntro}
+                                    />
+            
+                                </React.Fragment>
+                            ))}
                         </div>
                     </section>
 
