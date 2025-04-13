@@ -92,7 +92,7 @@ function Home() {
                             <p className="text-xl mb-6 text-primary">ML & Embedded Software Engineer</p>
                             <p className="text-secondary mb-8">
                                 I design complex algorithms and make them run on tiny devices.
-                                I like to think about the human interaction and a great user experiences.
+                                I like to think about a great user experience.
                             </p>
 
                             {/* Navigation */}

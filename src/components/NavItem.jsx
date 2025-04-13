@@ -4,16 +4,15 @@ import '../styles/theme.css';
 
 const NavItem = ({ href, children, isActive }) => {
   return (
-    <div className="nav-item-container relative">
+    <div className="nav-item-container relative group">
       <a 
         href={href} 
         className={`
           block 
-          hover-primary 
           transition-colors 
           pl-8 
           relative
-          ${isActive ? 'text-primary font-medium' : 'text-secondary'}
+          ${isActive ? '[color:var(--color-primary)] font-medium' : '[color:var(--color-text)] group-hover:[color:var(--color-primary)] group-hover:font-medium'}
         `}
       >
         <div 
@@ -25,11 +24,11 @@ const NavItem = ({ href, children, isActive }) => {
             h-[2px] 
             transition-all 
             duration-300 
-            ${isActive ? 'w-8 [background-color:var(--color-text)]' : 'w-4 [background-color:var(--color-text-secondary)] hover:[background-color:var(--color-text)]'} 
+            ${isActive ? 'w-8 [background-color:var(--color-primary)]' : 'w-4 [background-color:var(--color-text)] group-hover:w-8 group-hover:[background-color:var(--color-primary)]'} 
             nav-line
           `}
         />
-        <span className={`block transition-transform duration-300 ${isActive ? 'translate-x-4' : ''}`}>
+        <span className={`block transition-all duration-300 ${isActive ? 'translate-x-4' : 'group-hover:translate-x-4'}`}>
           {children}
         </span>
       </a>

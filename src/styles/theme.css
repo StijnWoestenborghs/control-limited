@@ -10,8 +10,6 @@
     --color-text-secondary: #4b5563;
     --color-border: #e5e7eb;
     --color-border-hover: #d1d5db;
-    --color-accent: #ff6b6b;
-    --color-accent-hover: #ff5252;
 }
 
 [data-theme="dark"] {
@@ -25,8 +23,6 @@
     --color-text-secondary: #7d84aa;
     --color-border: #0e1a30;
     --color-border-hover: #4b5563;
-    --color-accent: #ff6b6b;
-    --color-accent-hover: #ff5252;
 }
 
 /* Base styles */
@@ -108,3 +104,13 @@ body {
 .accent:hover {
     color: var(--color-accent-hover);
 } 
+
+/* Skill styles */
+.skill {
+    background-color: var(--color-background-secondary);
+    color: var(--color-primary);
+    border-radius: 9999px;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    font-weight: bold;
+}
