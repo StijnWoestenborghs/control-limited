@@ -4,6 +4,7 @@ import BlogPost from '../components/BlogPost';
 import NavItem from '../components/NavItem';
 import ProjectItem from '../components/ProjectItem';
 import ExperienceItem from '../components/ExperienceItem';
+import FooterLinks from '../components/FooterLinks';
 import { blogIds } from '../constants';
 import '../styles/theme.css';
 
@@ -105,30 +106,7 @@ function Home() {
                         </div>
 
                         {/* Footer with Contact Links */}
-                        <div>
-                            <div className="flex space-x-4 mb-4">
-                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
-                                   className="text-secondary hover-primary">
-                                    GitHub
-                                </a>
-                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-                                   className="text-secondary hover-primary">
-                                    LinkedIn
-                                </a>
-                                <a href="mailto:your@email.com"
-                                   className="text-secondary hover-primary">
-                                    Email
-                                </a>
-                            </div>
-
-                            {/* Dark Mode Toggle */}
-                            <button
-                                onClick={toggleDarkMode}
-                                className="px-4 py-2 rounded-md button-primary transition-colors"
-                            >
-                                {darkMode ? '🌞 Light Mode' : '🌙 Dark Mode'}
-                            </button>
-                        </div>
+                        <FooterLinks darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
                     </div>
                 </div>
 

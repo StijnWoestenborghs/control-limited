@@ -59,16 +59,8 @@ body {
 }
 
 /* Interactive elements */
-.hover-primary {
-    transition: color 0.2s ease;
-}
-
 .hover-primary:hover {
     color: var(--color-primary);
-}
-
-.hover-secondary {
-    transition: color 0.2s ease;
 }
 
 .hover-secondary:hover {
@@ -79,7 +71,6 @@ body {
 .button-primary {
     background-color: var(--color-primary);
     color: white;
-    transition: background-color 0.2s ease;
 }
 
 .button-primary:hover {
@@ -89,7 +80,6 @@ body {
 .button-secondary {
     background-color: var(--color-secondary);
     color: white;
-    transition: background-color 0.2s ease;
 }
 
 .button-secondary:hover {
