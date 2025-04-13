@@ -22,16 +22,17 @@ function Home() {
 
     return (
         <div className="min-h-screen bg-primary">
-            <div className="flex">
+            <div className="flex flex-col lg:flex-row max-w-[2400px] mx-auto px-4 sm:px-8 md:px-12 lg:px-24 xl:px-32">
                 {/* Left Column - Static */}
-                <div className="w-1/3 fixed h-screen p-8 border-r border-primary">
+                <div className="w-full lg:w-1/3 lg:fixed lg:h-screen p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20">
                     <div className="h-full flex flex-col justify-between">
                         {/* Profile Section */}
                         <div>
-                            <h1 className="text-4xl font-bold mb-2 text-primary">Your Name</h1>
-                            <p className="text-xl mb-6 text-primary">Front End Engineer</p>
+                            <h1 className="text-4xl font-bold mb-2 text-primary">Stijn Woestenborghs</h1>
+                            <p className="text-xl mb-6 text-primary">ML & Embedded Software Engineer</p>
                             <p className="text-secondary mb-8">
-                                Building accessible, pixel-perfect digital experiences for the web.
+                                I design complex algorithms and make them run on tiny devices.
+                                I like to think about the human interaction and a great user experiences.
                             </p>
 
                             {/* Navigation */}
@@ -72,13 +73,24 @@ function Home() {
                 </div>
 
                 {/* Right Column - Scrollable */}
-                <div className="w-2/3 ml-[33.333333%] p-8">
+                <div className="w-full lg:w-2/3 lg:ml-[33.333333%] p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20">
                     {/* About Section */}
                     <section id="about" className="mb-16">
-                        <h2 className="text-2xl font-bold mb-4 text-primary">About</h2>
+                        <h2 className="text-2xl font-bold mb-4 text-primary">Hello World!</h2>
                         <p className="text-secondary">
-                            Your detailed introduction goes here. Talk about your passion for development,
-                            your approach to problem-solving, and what drives you in your work.
+                            Perhaps you agree that it is the task of an engineer to perceive, understand and control his environment. However, reality remains unpredictable, noisy and full of unexpected influences. So how can we manipulate a system to the best of our ability? An interesting question with many answers.
+                        </p>
+                        <br />
+                        <p className="text-secondary">
+                            My name is Stijn Woestenborghs. I am an engineer at Sony with a MSc in Control Engineering and Automation. I am genuinely passionate about the myriad of advanced technologies that exist today and I get excited to see how they affect the lives of others.
+                        </p>
+                        <br />
+                        <p className="text-secondary">
+                            With this site I would like to share with you what I have learned or what inspires me. I want to touch upon the subjects that interest me most and go deep into the implementation that lies at the core of a solution.
+                        </p>
+                        <br />
+                        <p className="text-secondary">
+                            After all, something remains just a theory before it gets actually deployed. 🚀
                         </p>
                     </section>
 
