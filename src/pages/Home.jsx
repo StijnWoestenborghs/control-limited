@@ -21,22 +21,58 @@ function Home() {
         // Add scroll event listener for section tracking
         const handleScroll = () => {
             const sections = ['about', 'experience', 'blog', 'projects'];
-            const currentSection = sections.find(section => {
-                const element = document.getElementById(section);
-                if (element) {
-                    const rect = element.getBoundingClientRect();
-                    return rect.top <= 100 && rect.bottom >= 100;
-                }
-                return false;
-            });
+            const scrollPosition = window.scrollY + window.innerHeight;
+            const pageBottom = document.documentElement.scrollHeight;
             
-            if (currentSection) {
-                setActiveSection(currentSection);
+            // If we're at the bottom of the page, activate the last section
+            if (Math.abs(scrollPosition - pageBottom) < 50) {
+                setActiveSection(sections[sections.length - 1]);
+                return;
+            }
+
+            // Otherwise find the current section based on scroll position
+            for (let i = sections.length - 1; i >= 0; i--) {
+                const section = document.getElementById(sections[i]);
+                if (section) {
+                    const rect = section.getBoundingClientRect();
+                    const sectionTop = rect.top + window.scrollY;
+                    if (window.scrollY >= sectionTop - 100) {
+                        setActiveSection(sections[i]);
+                        break;
+                    }
+                }
             }
         };
 
+        // Add click handlers for smooth scrolling
+        const handleNavClick = (e, sectionId) => {
+            e.preventDefault();
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const yOffset = -50; // Offset to account for any fixed headers
+                const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+                setActiveSection(sectionId);
+            }
+        };
+
+        // Add click handlers to nav items
+        const navItems = document.querySelectorAll('nav a');
+        navItems.forEach(item => {
+            const sectionId = item.getAttribute('href').substring(1);
+            item.addEventListener('click', (e) => handleNavClick(e, sectionId));
+        });
+
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        handleScroll(); // Call once to set initial active section
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            navItems.forEach(item => {
+                const sectionId = item.getAttribute('href').substring(1);
+                item.removeEventListener('click', (e) => handleNavClick(e, sectionId));
+            });
+        };
     }, []);
 
     const toggleDarkMode = () => {
@@ -125,10 +161,10 @@ function Home() {
                             <ExperienceItem
                                 dateFrom="JULY 2017"
                                 dateTo="DEC 2017"
-                                title="UI Engineer Co-op"
-                                company="Apple"
+                                title="ML Engineer Co-op"
+                                company="XXX"
                                 companyUrl="https://www.apple.com"
-                                explanation="Developed and styled interactive web apps for Apple Music, including the user interface of Apple Music's embeddable web player widget for in-browser user authorization and full song playback."
+                                explanation="Developed and styled interactive web apps for Afull song playback."
                                 links={[
                                     { label: "MusicKit.js", url: "https://developer.apple.com/documentation/musickitjs" },
                                     { label: "9to5Mac", url: "https://9to5mac.com" },
