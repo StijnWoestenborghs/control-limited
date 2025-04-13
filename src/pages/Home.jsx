@@ -138,11 +138,11 @@ function Home() {
                     <section id="about" className="mb-16">
                         <h2 className="text-2xl font-bold mb-4 text-primary">Hello World!</h2>
                         <p className="text-secondary">
-                            Perhaps you agree that it is the task of an engineer to perceive, understand and control his environment. However, reality remains unpredictable, noisy and full of unexpected influences. So how can we manipulate a system to the best of our ability? An interesting question with many answers.
+                            Perhaps you agree that it is the task of an engineer to perceive, understand and <span className="font-bold text-primary">control</span> his environment. However, reality remains unpredictable, noisy and full of unexpected influences. So how can we manipulate a system to <span className="font-bold text-primary">the best of our ability</span>? An interesting question with many answers.
                         </p>
                         <br />
                         <p className="text-secondary">
-                            My name is Stijn Woestenborghs. I am an engineer at Sony with a MSc in Control Engineering and Automation. I am genuinely passionate about the myriad of advanced technologies that exist today and I get excited to see how they affect the lives of others.
+                            My name is <a href="https://www.linkedin.com/in/stijnwoestenborghs/" target="_blank" rel="noopener noreferrer" className="font-bold text-primary hover-primary">Stijn Woestenborghs</a>. I am an engineer at <span className="font-bold text-primary">Sony</span> with a MSc in Control Engineering and Automation. I am genuinely passionate about the myriad of advanced technologies that exist today and I get excited to see how they affect the lives of others.
                         </p>
                         <br />
                         <p className="text-secondary">
@@ -150,7 +150,7 @@ function Home() {
                         </p>
                         <br />
                         <p className="text-secondary">
-                            After all, something remains just a theory before it gets actually deployed. 🚀
+                            After all, something remains just a theory before it gets actually <span className="font-bold text-primary">deployed</span>. 🚀
                         </p>
                     </section>
 
@@ -159,26 +159,46 @@ function Home() {
                         <h2 className="text-2xl font-bold mb-8 text-primary">Experience</h2>
                         <div className="space-y-8">
                             <ExperienceItem
-                                dateFrom="JULY 2017"
-                                dateTo="DEC 2017"
-                                title="ML Engineer Co-op"
-                                company="XXX"
-                                companyUrl="https://www.apple.com"
-                                explanation="Developed and styled interactive web apps for Afull song playback."
-                                links={[
-                                    { label: "MusicKit.js", url: "https://developer.apple.com/documentation/musickitjs" },
-                                    { label: "9to5Mac", url: "https://9to5mac.com" },
-                                    { label: "The Verge", url: "https://www.theverge.com" }
-                                ]}
-                                skills={["Ember", "SCSS", "JavaScript", "MusicKit.js"]}
-                            />
-                            <ExperienceItem
-                                dateFrom="JAN 2023"
-                                title="ML & Embedded Software Engineer"
+                                dateFrom="APR 2023"
+                                title="Embedded Software Engineer (ML)"
                                 company="Sony"
                                 companyUrl="https://www.sony.com"
-                                explanation="Design and implementation of machine learning algorithms for embedded systems, focusing on optimization and real-time performance."
-                                skills={["Python", "C++", "TensorFlow", "PyTorch", "ARM", "CUDA"]}
+                                explanation="Computer Vision application development on the Sony IMX500 AI Accelerator chip. IMX500 integration on various devices like the Raspberry Pi OS. Main contributor of an SDK that allows AI model, model compilation and application development on IMX500 supported devices. Building no/low code tooling (React) allowing exploration of the IMX500 capabilities."
+                                links={[
+                                    { label: "Modlib", url: "https://developer.aitrios.sony-semicon.com/en/raspberrypi-ai-camera" },
+                                    { label: "Raspberry Pi Ai Camera", url: "https://www.raspberrypi.com/products/ai-camera/" }
+                                ]}
+                                skills={["Python", "C++", "TensorFlow", "PyTorch", "ARM", "CUDA", "React", "TailwindCSS", "Embedded", "MQTT"]}
+                            />
+                            <ExperienceItem
+                                dateFrom="NOV 2021"
+                                dateTo="FEB 2023"
+                                title="Embedded Software Engineer"
+                                company="In The Pocket"
+                                companyUrl="https://www.inthepocket.com/"
+                                explanation="Embedded development of an Edge Computing Platform (Homehub). Integration of middleware communication protocols. Development & integration of platform applications layers and OTA updates system. Integration of CICD setup & DevOps platform."
+                                links={[
+                                    { label: "Homehub", url: "https://www.daikin.be/nl_be/producten/product.html/EKRHH.html" }
+                                ]}
+                                skills={["ROS2", "DDS", "MQTT", "HTTP", "C++", "Python", "Golang", "Gitlab CI/CD", "Docker", "AWS", "Embedded"]}
+                            />
+                            <ExperienceItem
+                                dateFrom="FEB 2021"
+                                dateTo="NOV 2021"
+                                title="Machine Learning & Optimization Engineer"
+                                company="In The Pocket"
+                                companyUrl="https://www.inthepocket.com/"
+                                explanation="(Advanced Development) Household energy optimization for HVAC Systems: R&D of a Model Predictive Controller (MPC) combined with additional AI models & predictions. Controller development and implementation for field site validation. Proof of Concept: Reinforcement Learning as a controller for HVAC Systems."
+                                skills={["Python", "C++", "MATLAB/Simulink", "TensorFlow", "PyTorch", "CUDA", "Reinforcement Learning", "MPC"]}
+                            />
+                            <ExperienceItem
+                                dateFrom="JUL 2020"
+                                dateTo="JUN 2021"
+                                title="Reinforcement Learning: Sim to Real transfer in Mechatronic Systems."
+                                company="Ghent University"
+                                companyUrl="https://www.inthepocket.com/"
+                                explanation="Training and fine-tuning of multiple Reinforcement Learning Algorithms with customization of OpenAI Gym environments. Implementation of Domain Randomization. Research, implementation and validation of Adaptive Domain Randomization."
+                                skills={["Python", "C++", "TensorFlow", "PyTorch", "CUDA", "Reinforcement Learning", "MPC", "Mechatronics"]}
                             />
                         </div>
                     </section>
