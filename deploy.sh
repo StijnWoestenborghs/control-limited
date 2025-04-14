@@ -24,7 +24,7 @@ done
 
 # Build the React application
 echo "Building the React application..."
-npm run build
+npm run dbuild
 
 # Check if the build was successful
 if [ $? -ne 0 ]; then

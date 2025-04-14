@@ -3,9 +3,6 @@ import { Link } from 'react-router-dom';
 
 function BlogPost({ id, date, topic, title, shortIntro, image }) {
 
-    console.log(image);
-    console.log(title);
-
     return (
         <Link 
             to={`/${id}`} 
