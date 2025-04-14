@@ -9,6 +9,7 @@ import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { blogPostPaths, metadataPaths } from '../constants';
 import FooterLinks from '../components/FooterLinks';
 import { useTheme } from '../context/ThemeContext';
+import CoffeeCounter from '../components/CoffeeCounter';
 
 // Fetch Markdown content
 async function fetchMarkdown(filePath) {
@@ -114,6 +115,8 @@ function BlogPostPage() {
                 I like to think about a great user experience.
               </p>
 
+              <CoffeeCounter />
+
               {/* Back Button */}
               <Link to="/" className="flex items-center text-primary mb-8 hover-primary transform transition-transform duration-200 hover:translate-x-1">
                 <svg className="w-6 h-6 mr-2 text-current hover:text-[var(--color-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -124,7 +127,7 @@ function BlogPostPage() {
             </div>
 
             {/* Footer with Contact Links */}
-            <div className="pt-2">
+            <div className="pt-2 pb-8">
               <FooterLinks darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
             </div>
           </div>

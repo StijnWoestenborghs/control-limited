@@ -5,6 +5,7 @@ import NavItem from '../components/NavItem';
 import ProjectItem from '../components/ProjectItem';
 import ExperienceItem from '../components/ExperienceItem';
 import FooterLinks from '../components/FooterLinks';
+import CoffeeCounter from '../components/CoffeeCounter';
 import { blogIds } from '../constants';
 import { useTheme } from '../context/ThemeContext';
 import '../styles/theme.css';
@@ -106,6 +107,8 @@ function Home() {
                                 I design complex algorithms and make them run on tiny devices.
                                 I like to think about a great user experience.
                             </p>
+                            
+                            <CoffeeCounter />
 
                             {/* Navigation */}
                             <nav className="space-y-4">
@@ -117,7 +120,7 @@ function Home() {
                         </div>
 
                         {/* Footer with Contact Links */}
-                        <div className="pt-8">
+                        <div className="pt-8 pb-8">
                             <FooterLinks darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
                         </div>
                     </div>
