@@ -198,7 +198,7 @@ function Home() {
                                 dateTo="JUN 2021"
                                 title="Reinforcement Learning: Sim to Real transfer in Mechatronic Systems."
                                 company="Ghent University"
-                                companyUrl="https://www.inthepocket.com/"
+                                companyUrl="https://www.ugent.be/en"
                                 explanation="Training and fine-tuning of multiple Reinforcement Learning Algorithms with customization of OpenAI Gym environments. Implementation of Domain Randomization. Research, implementation and validation of Adaptive Domain Randomization."
                                 skills={["Python", "C++", "TensorFlow", "PyTorch", "CUDA", "Reinforcement Learning", "MPC", "Mechatronics"]}
                             />
@@ -228,20 +228,29 @@ function Home() {
                     {/* Projects Section */}
                     <section id="projects" className="mb-16">
                         <h2 className="text-2xl font-bold mb-4 text-primary">Featured Projects</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                             <ProjectItem
-                                title="Control Limited"
-                                description="A modern control engineering portfolio showcasing advanced algorithms and embedded systems development."
-                                technologies={["React", "TailwindCSS", "Control Theory", "Embedded Systems"]}
-                                githubLink="https://github.com/yourusername/control-limited"
-                                demoLink="https://control-limited.com"
-                                image="/images/control-project.jpg"
+                                title="Basalt"
+                                description="A Machine Learning framework from scratch in Pure Mojo 🔥"
+                                technologies={["AI", "ML", "Mojo", "Autograd", "Neural Networks"]}
+                                githubLink="https://github.com/basalt-org/basalt"
+                                image="./assets/basalt.png"
                             />
                             <ProjectItem
-                                title="Embedded ML Pipeline"
-                                description="Implementation of machine learning algorithms optimized for resource-constrained embedded devices."
-                                technologies={["Python", "C++", "TensorFlow Lite", "ARM Cortex-M"]}
-                                githubLink="https://github.com/yourusername/embedded-ml"
+                                title="Gradi Mojo"
+                                description="Language performance evaluation on a simple gradient descent problem."
+                                technologies={["Python", "Numpy", "Jax", "C++", "Mojo"]}
+                                githubLink="https://github.com/StijnWoestenborghs/gradi-mojo"
+                                image="./blogs/mojo-does-give-superpowers/flame-icon.png"
+                            />
+                            <ProjectItem
+                                title="Control"
+                                description="Personal website to share my experiences, blogs and projects."
+                                technologies={["React", "TailwindCSS", "JavaScript", "Vite"]}
+                                demoLink="https://control.limited/"
+                                githubLink="https://github.com/StijnWoestenborghs/control-limited"
+                                image="./assets/ctrl-logo.png"
+                                showStars={false}
                             />
                         </div>
                     </section>

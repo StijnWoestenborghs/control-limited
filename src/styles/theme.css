@@ -86,14 +86,6 @@ body {
     background-color: var(--color-secondary-hover);
 }
 
-/* Accent styles */
-.accent {
-    color: var(--color-accent);
-}
-
-.accent:hover {
-    color: var(--color-accent-hover);
-} 
 
 /* Skill styles */
 .skill {
