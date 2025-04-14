@@ -1,0 +1,98 @@
+:root {
+    /* Light theme (default) */
+    --color-background: #fefeff;
+    --color-background-secondary: #f3f4f6;
+    --color-primary: #5d62fe;
+    --color-primary-hover: #4a4fd8;
+    --color-secondary: #637bff;
+    --color-secondary-hover: #374151;
+    --color-text: #030c12;
+    --color-text-secondary: #4b5563;
+    --color-border: #e5e7eb;
+    --color-border-hover: #d1d5db;
+}
+
+[data-theme="dark"] {
+    --color-background: #030c12;
+    --color-background-secondary: #1a1f2e;
+    --color-primary: #637bff;
+    --color-primary-hover: #4b63e6;
+    --color-secondary: #9a9e9c;
+    --color-secondary-hover: #5c6388;
+    --color-text: #fefeff;
+    --color-text-secondary: #7d84aa;
+    --color-border: #0e1a30;
+    --color-border-hover: #4b5563;
+}
+
+/* Base styles */
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+/* Background styles */
+.bg-primary {
+    background-color: var(--color-background);
+}
+
+.bg-secondary {
+    background-color: var(--color-background-secondary);
+}
+
+/* Text styles */
+.text-primary {
+    color: var(--color-text);
+}
+
+.text-secondary {
+    color: var(--color-text-secondary);
+}
+
+/* Border styles */
+.border-primary {
+    border-color: var(--color-border);
+}
+
+.border-primary:hover {
+    border-color: var(--color-border-hover);
+}
+
+/* Interactive elements */
+.hover-primary:hover {
+    color: var(--color-primary);
+}
+
+.hover-secondary:hover {
+    color: var(--color-secondary);
+}
+
+/* Button styles */
+.button-primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.button-primary:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.button-secondary {
+    background-color: var(--color-secondary);
+    color: white;
+}
+
+.button-secondary:hover {
+    background-color: var(--color-secondary-hover);
+}
+
+
+/* Skill styles */
+.skill {
+    background-color: var(--color-background-secondary);
+    color: var(--color-primary);
+    border-radius: 9999px;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    font-weight: bold;
+}

@@ -1,23 +1,20 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 import Home from './pages/Home';
 import BlogPostPage from './pages/BlogPostPage';
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
     return (
-        <>
-            <div className="mx-[4rem] sm:mx-[8rem] md:mx-[10rem] lg:mx-[14rem] xl:mx-[18rem] shadow-md font-inconsolata"> 
+        <ThemeProvider>
+            <div className="font-inconsolata mx-4 sm:mx-6 md:mx-8 lg:mx-12 my-8 sm:my-10 md:my-12">
                 <Router basename='/control-limited/'>
-                    <Navbar />
                     <Routes>
                         <Route path='/' element={<Home />} />
                         <Route path="/:id" element={<BlogPostPage />} />
                     </Routes>
-                    <Footer />
                 </Router>
             </div>
-        </>
+        </ThemeProvider>
     );
 }
 

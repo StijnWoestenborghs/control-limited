@@ -4,5 +4,6 @@
   "authors": ["Stijn Woestenborghs"],
   "title": "Sim2Real transfer in Mechatronic Systems",
   "shortIntro": "While the idea behind Reinforcement Learning for mechatronic systems is appealing, it struggles to find its way into an industrial setting. Simreal, a library for Adaptive Domain Randomization.",
-  "githubRepo": "https://github.com/D2LAB-UGent/Simreal"
+  "githubRepo": "https://github.com/D2LAB-UGent/Simreal",
+  "image": "./blogs/sim2real-transfer-in-mechatronic-systems/ADR-framework.png"
 }
