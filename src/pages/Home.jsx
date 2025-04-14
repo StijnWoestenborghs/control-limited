@@ -6,13 +6,13 @@ import ProjectItem from '../components/ProjectItem';
 import ExperienceItem from '../components/ExperienceItem';
 import FooterLinks from '../components/FooterLinks';
 import { blogIds } from '../constants';
+import { useTheme } from '../context/ThemeContext';
 import '../styles/theme.css';
 
 function Home() {
-    const [darkMode, setDarkMode] = useState(false);
     const [activeSection, setActiveSection] = useState('about');
-
     const [blogs, setBlogs] = useState([]);
+    const { darkMode, toggleDarkMode } = useTheme();
 
     async function fetchJson(filePath) {
         const response = await fetch(filePath);
@@ -35,12 +35,6 @@ function Home() {
     }, []);
 
     useEffect(() => {
-        // Check system preference on mount
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            setDarkMode(true);
-            document.documentElement.setAttribute('data-theme', 'dark');
-        }
-
         // Add scroll event listener for section tracking
         const handleScroll = () => {
             const sections = ['about', 'experience', 'blog', 'projects'];
@@ -98,11 +92,6 @@ function Home() {
         };
     }, []);
 
-    const toggleDarkMode = () => {
-        setDarkMode(!darkMode);
-        document.documentElement.setAttribute('data-theme', !darkMode ? 'dark' : 'light');
-    };
-
     return (
         <div className="min-h-screen bg-primary">
             <div className="flex flex-col lg:flex-row max-w-[2400px] mx-auto px-4 sm:px-8 md:px-12 lg:px-24 xl:px-32">
@@ -128,7 +117,9 @@ function Home() {
                         </div>
 
                         {/* Footer with Contact Links */}
-                        <FooterLinks darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+                        <div className="pt-8">
+                            <FooterLinks darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+                        </div>
                     </div>
                 </div>
 
