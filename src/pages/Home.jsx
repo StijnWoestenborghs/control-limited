@@ -113,7 +113,7 @@ function Home() {
                         <div>
                             <h1 className="text-4xl font-bold mb-2 text-primary">Stijn Woestenborghs</h1>
                             <p className="text-xl mb-6 text-primary">ML & Embedded Software Engineer</p>
-                            <p className="text-secondary mb-8">
+                            <p className="text-secondary mb-8 max-w-sm">
                                 I design complex algorithms and make them run on tiny devices.
                                 I like to think about a great user experience.
                             </p>
@@ -217,6 +217,7 @@ function Home() {
                                         topic={blog.topic}
                                         title={blog.title}
                                         shortIntro={blog.shortIntro}
+                                        image={blog.image}
                                     />
             
                                 </React.Fragment>

@@ -1,12 +1,26 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-function BlogPost({ id, date, topic, title, shortIntro }) {
+function BlogPost({ id, date, topic, title, shortIntro, image }) {
+
+    console.log(image);
+    console.log(title);
+
     return (
         <Link 
             to={`/${id}`} 
-            className="group block p-4 rounded-lg transition-colors cursor-pointer hover:[background-color:var(--color-background-secondary)]"
+            className="group grid grid-cols-[80px_1fr] gap-4 p-4 rounded-lg transition-colors cursor-pointer hover:[background-color:var(--color-background-secondary)]"
         >
+            {/* Image Column */}
+            <div className="w-[80px] h-[80px] rounded-lg overflow-hidden">
+                <img 
+                    src={image} 
+                    alt={title}
+                    className="w-full h-full object-cover"
+                />
+            </div>
+
+            {/* Content Column */}
             <div>
                 {/* Title */}
                 <h2 className="text-xl font-medium text-primary group-hover:[color:var(--color-primary)]">
@@ -38,6 +52,7 @@ BlogPost.propTypes = {
     topic: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     shortIntro: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
 };
 
 export default BlogPost;

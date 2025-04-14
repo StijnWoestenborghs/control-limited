@@ -4,5 +4,6 @@
   "authors": ["Stijn Woestenborghs"],
   "title": "Unlocking the Car Battery's full Potential",
   "shortIntro": "The rising efficiency and energy density of Li-ion batteries is driving an exciting wave of innovation, which not only accelerates adoption, but also enables new technologies with an even greater impact. Needless to say that an accurate State of Charge estimation is vital. ",
-  "githubRepo": "https://github.com/StijnWoestenborghs/state-of-charge-estimation"
+  "githubRepo": "https://github.com/StijnWoestenborghs/state-of-charge-estimation",
+  "image": "./blogs/unlocking-the-car-batterys-full-potential/shapley-feature-importance.png"
 }
