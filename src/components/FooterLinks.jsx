@@ -21,7 +21,8 @@ function FooterLinks({ darkMode, toggleDarkMode }) {
                 </label>
             </div>
 
-            <div className="flex flex-col space-y-3 text-sm">
+            {/* Links Section - Hidden on small screens */}
+            <div className="hidden lg:flex flex-col space-y-3 text-sm">
                 <a href="https://github.com/StijnWoestenborghs" target="_blank" rel="noopener noreferrer" 
                    className="text-secondary hover-primary flex items-center space-x-2">
                     <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
