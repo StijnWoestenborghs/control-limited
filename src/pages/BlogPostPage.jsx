@@ -7,9 +7,9 @@ import rehypeRaw from 'rehype-raw';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { blogPostPaths, metadataPaths } from '../constants';
+import Profile from '../components/Profile';
 import FooterLinks from '../components/FooterLinks';
 import { useTheme } from '../context/ThemeContext';
-import CoffeeCounter from '../components/CoffeeCounter';
 
 // Fetch Markdown content
 async function fetchMarkdown(filePath) {
@@ -108,14 +108,8 @@ function BlogPostPage() {
           <div className="h-full flex flex-col justify-between">
             {/* Profile Section */}
             <div>
-              <h1 className="text-4xl font-bold mb-2 text-primary">Stijn Woestenborghs</h1>
-              <p className="text-xl mb-6 text-primary">ML & Embedded Software Engineer</p>
-              <p className="text-secondary mb-8 max-w-sm">
-                I design complex algorithms and make them run on tiny devices.
-                I like to think about a great user experience.
-              </p>
-
-              <CoffeeCounter />
+              
+              <Profile />
 
               {/* Back Button */}
               <Link to="/" className="flex items-center text-primary mb-8 hover-primary transform transition-transform duration-200 hover:translate-x-1">

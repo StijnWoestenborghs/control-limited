@@ -5,7 +5,7 @@ import NavItem from '../components/NavItem';
 import ProjectItem from '../components/ProjectItem';
 import ExperienceItem from '../components/ExperienceItem';
 import FooterLinks from '../components/FooterLinks';
-import CoffeeCounter from '../components/CoffeeCounter';
+import Profile from '../components/Profile';
 import { blogIds } from '../constants';
 import { useTheme } from '../context/ThemeContext';
 import '../styles/theme.css';
@@ -101,15 +101,9 @@ function Home() {
                     <div className="h-full flex flex-col justify-between">
                         {/* Profile Section */}
                         <div>
-                            <h1 className="text-4xl font-bold mb-2 text-primary">Stijn Woestenborghs</h1>
-                            <p className="text-xl mb-6 text-primary">ML & Embedded Software Engineer</p>
-                            <p className="text-secondary mb-8 max-w-sm">
-                                I design complex algorithms and make them run on tiny devices.
-                                I like to think about a great user experience.
-                            </p>
                             
-                            <CoffeeCounter />
-
+                            <Profile />
+                            
                             {/* Navigation */}
                             <nav className="space-y-4">
                                 <NavItem href="#about" isActive={activeSection === 'about'}>About</NavItem>
