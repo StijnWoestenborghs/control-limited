@@ -6,10 +6,10 @@ function BlogPost({ id, date, topic, title, shortIntro, image }) {
     return (
         <Link 
             to={`/${id}`} 
-            className="group grid grid-cols-[80px_1fr] gap-4 p-4 rounded-lg transition-colors cursor-pointer hover:[background-color:var(--color-background-secondary)]"
+            className="group grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-4 p-4 rounded-lg transition-colors cursor-pointer hover:[background-color:var(--color-background-secondary)]"
         >
-            {/* Image Column */}
-            <div className="w-[80px] h-[80px] rounded-lg overflow-hidden">
+            {/* Image Column - Moves to bottom on small screens */}
+            <div className="w-[80px] h-[80px] rounded-lg overflow-hidden order-2 lg:order-none">
                 <img 
                     src={image} 
                     alt={title}
@@ -17,8 +17,8 @@ function BlogPost({ id, date, topic, title, shortIntro, image }) {
                 />
             </div>
 
-            {/* Content Column */}
-            <div>
+            {/* Content Column - Moves to top on small screens */}
+            <div className="order-1 lg:order-none">
                 {/* Title */}
                 <h2 className="text-xl font-medium text-primary group-hover:[color:var(--color-primary)]">
                     {title}
