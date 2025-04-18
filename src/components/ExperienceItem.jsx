@@ -19,19 +19,18 @@ const ExperienceItem = ({
 
   return (
     <div 
-      className={`group relative mb-12 grid grid-cols-[120px_1fr] gap-6 p-4 rounded-lg transition-colors cursor-pointer hover:[background-color:var(--color-background-secondary)] ${companyUrl ? 'cursor-pointer' : ''}`}
+      className={`group relative mb-12 grid grid-cols-1 lg:grid-cols-[120px_1fr] gap-6 p-4 rounded-lg transition-colors cursor-pointer hover:[background-color:var(--color-background-secondary)] ${companyUrl ? 'cursor-pointer' : ''}`}
       onClick={handleClick}
       role={companyUrl ? 'link' : 'article'}
       tabIndex={companyUrl ? 0 : undefined}
     >
-      {/* Left Column - Date */}
-      <div className="text-sm text-secondary uppercase tracking-wider">
-        {dateFrom} — <br />
-        {dateTo || 'Present'}
+      {/* Date - Moves to top on small screens */}
+      <div className="text-sm text-secondary uppercase tracking-wider order-1 lg:order-none">
+        {dateFrom} — <span className="hidden lg:inline"><br /></span> {dateTo || 'Present'}
       </div>
 
       {/* Right Column - Content */}
-      <div>
+      <div className="order-2 lg:order-none">
         {/* Title and Company */}
         <div className="flex items-center gap-2 mb-3">
           <h3 className="text-xl font-medium text-primary group-hover:[color:var(--color-primary)]">
